@@ -16,6 +16,8 @@ while True:
     lower_bound = np.array([35, 50, 50])
     upper_bound = np.array([150, 225, 225])
     mask = cv.inRange(frame_hsv, lower_bound, upper_bound)
+    contours, hierarchy = cv.findContours(mask, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
+
     result = cv.bitwise_and(frame, frame, mask = mask)
     result_grayscale = cv.cvtColor(result, cv.COLOR_BGR2GRAY)
     result_grayscale_blurred = cv.blur(result_grayscale, (3,3))
