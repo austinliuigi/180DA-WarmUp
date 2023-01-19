@@ -16,7 +16,9 @@ while True:
     result_grayscale_blurred = cv.blur(result_grayscale, (3,3))
 
     edges = cv.Canny(result_grayscale_blurred, 100, 200)
-    contours, hierarchy = cv.findContours(edges, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
+    # contours, hierarchy = cv.findContours(edges, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
+    _, thresh = cv.threshold(result_grayscale, 50, 255, 0)
+    contours, hierarchy = cv.findContours(thresh, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
 
     if len(contours) > 0:
         max_contour = max(contours, key = cv.contourArea)
