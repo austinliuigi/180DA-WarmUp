@@ -1,3 +1,8 @@
+# Portion of code came from:
+# 1. https://docs.opencv.org/3.4/d4/d73/tutorial_py_contours_begin.html
+# 2. https://docs.opencv.org/4.x/df/d9d/tutorial_py_colorspaces.html
+
+
 import numpy as np
 import cv2 as cv
 
