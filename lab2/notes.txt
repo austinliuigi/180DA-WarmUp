@@ -2,12 +2,27 @@ Speech Recognition
 
 - longer phrases seem to be more accuractely recognized
 
-- similar-sounding words can be mixed up by the recognizer, but not to an unbearable amount
+- similar-sounding words can be mixed up by the recognizer, but not to an
+  unbearable amount
 
-(a) We can implement speech recognition in our project to perform simple actions (e.g. "switch" to switch items, "mount" to mount the slingshot station, "unmount" to unmount the station)
+(a) We can implement speech recognition in our project to perform simple actions
+(e.g. "switch" to switch items, "mount" to mount the slingshot station,
+"unmount" to unmount the station)
 
-(b) We're aiming to make our speech recognition simple. As that isn't the main focus for our project, the simpler the better.
+(b) We're aiming to make our speech recognition simple. As that isn't the main
+focus for our project, the simpler the better.
 
-(c) The higher the accuracy, the better of course. If I were to quantize it, maybe 90% and above would be ideal. A missed recognition wouldn't exactly hurt the progress of the game, but would be frustrating for the player if it happens often. The speed of the processing is a concern. Ideally, we would be able to process and listen at the same time, but the simple program in this lab is pretty slow when recognizing the microphone input. We need more testing to see how we can tailor it to our needs.
+(c) The higher the accuracy, the better of course. If I were to quantize it,
+maybe 90% and above would be ideal. A missed recognition wouldn't exactly hurt
+the progress of the game, but would be frustrating for the player if it happens
+often. The speed of the processing is a concern. Ideally, we would be able to
+process and listen at the same time, but the simple program in this lab is
+pretty slow when recognizing the microphone input. We need more testing to see
+how we can tailor it to our needs.
 
-(d) When it comes to specific hardware, small microphones that can attach to the player or their slingshot might be a good investment. If we were to use the computer's builtin microphone, we there would be a chance that it doesn't detect the player's speech if they are standing relatively far away. Additionally, it might pick up the other team's speech and execute the actions for the wrong player.
+(d) When it comes to specific hardware, small microphones that can attach to the
+player or their slingshot might be a good investment. If we were to use the
+computer's builtin microphone, we there would be a chance that it doesn't detect
+the player's speech if they are standing relatively far away. Additionally, it
+might pick up the other team's speech and execute the actions for the wrong
+player.
