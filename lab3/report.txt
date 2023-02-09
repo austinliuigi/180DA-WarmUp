@@ -1,0 +1,10 @@
+A short blurb about graphics for our project:
+
+Initially, we are going to build our game using pygame, so this lab was really
+helpful for us going forward into our project. On the side, I'll be looking
+into Unity to upgrade possibly make our game more graphically pleasing if we
+have time to do that.
+
+For the lab, I partnered up with Bruce.
+
+Screenshots are in the github repo.
