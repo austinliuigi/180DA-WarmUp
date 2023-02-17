@@ -1,0 +1,50 @@
+**Task 3.2**:
+
+Observe how much lag is present. Are there ways to reduce the lag (e.g. reducing the frequency at
+which messages are sent)? What if you could do processing on the IMU itself so that only a single
+message is sent when something is recognized? What are other ways of getting around the lag, if you
+have to have lag?
+
+There didn't seem to be much lag in my test. Nevertheless, if lag becomes an
+issue, I think the methods we would use to cut down on it would be:
+
+1. Host our own local broker (if the bottleneck turns out to be the packet travel time)
+2. Pre-process the data before sending (if the bottleneck is the amount of data being sent)
+
+**Task 4.1**:
+
+Visually explore the IMU data from the constant stream of input upon running the IMU code. Roughly
+determine the +x, +y, +z directions and confirm the roll, pitch, yaw (rotations about the x, y, z axes,
+respectively) values. Do you see the gravity acceleration when idle?
+
+Top down view of IMU:
+  ----------------
+ |      |+x|      |
+ |       --       |
+ |                |
+ | -y          +y |
+ |                |
+ |       --       |
+ |      |-x|      |
+  ----------------
++z is out of the screen
+-z is into the screen
+
+The effect due to gravity is clearly evident. When holding it idly at different
+orientations, the directions that correspond to the direction of gravity have
+higher acceleration readings.
+
+**Task 4.2**
+
+It seems like the only reliable sensors on the IMU are the accelerometers. For
+that reason, we can use the magnitude of the accelerometer vector, $[a_x a_y a_z]$
+to fairly reliably determine whether or not the IMU is idle.
+
+We can do this by taking a baseline measurement of the magnitude when the IMU
+is idle and adjust the threshold value according to how sensitive we want our
+algorithm to be.
+
+**Task 4.3**
+
+As mentioned previously, the accelerometer measurements seem to be the only
+ones that are reliable, so I'm going to use those for the classification.
